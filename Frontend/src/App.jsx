@@ -14,7 +14,7 @@ function App() {
   const [doctors, setDoctors] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3535/doctors-data")
+    fetch("https://hospital-management-full-stack-project.onrender.com/doctors-data")
       .then(response => response.json())
       .then(data => setDoctors(data))
       .catch(error => console.error("Error fetching Doctors", error));
