@@ -1,0 +1,57 @@
+/* src/App.css */
+
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.navbar {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+#navbar-nav{
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar-brand .fw-bold {
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  color: #007bff;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0056b3;
+}
+
+footer {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  padding: 20px;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
