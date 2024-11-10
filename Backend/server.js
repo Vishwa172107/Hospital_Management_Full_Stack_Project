@@ -10,11 +10,22 @@ server.use(e.urlencoded({ extended: true }));
 server.use(cors(origin="https://hospital-management-full-stack-project-r18k.onrender.com"))
 server.use(e.json())
 server.listen(port, ()=>{
-    console.log("Server listening at 3535");
+    console.log(`Server listening at ${port}`);
 })
 server.get("/doctors-data", async(req, res)=>{
     let doctors = await(my_model.find())
     res.json(doctors)
+})
+server.get("/", async(req, res)=>{
+    let doctors = await(my_model.find())
+    const appointmentBooked = req.query.appointmentBooked === 'true';
+    let appointment_array = await(appointments.find())
+    res.render("Home.ejs", {doctors, appointmentBooked, appointment_array})
+    // res.send("Server is live!")
+})
+server.get("/find-doctors", async(req, res)=>{
+    let doctors = await(my_model.find())
+    res.render("Doctors.ejs", {doctors})
 })
 server.get("/appointment", async(req, res)=>{
     let doctors = await(my_model.find())
