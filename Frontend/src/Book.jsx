@@ -49,6 +49,13 @@ function BookAppointment({ doctors, timeSlots }) {
         },
         body: JSON.stringify(formData)
       });
+      setFormData({
+        patientName: '',
+        patientAge: '',
+        doctor: '',
+        appointmentDate: '',
+        slot: ''
+      });
       const result = await response.json();
       console.log("Appointment booked:", result);
       const selectedDoctor = doctors.find(doc => doc._id === formData.doctor);
