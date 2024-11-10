@@ -42,7 +42,7 @@ function BookAppointment({ doctors, timeSlots }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3535/appointment-form", {
+      const response = await fetch("https://hospital-management-full-stack-project.onrender.com/appointment-form", {
         method: "POST",
         headers: {
           "Content-type": "application/json"
