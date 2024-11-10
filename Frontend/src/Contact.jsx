@@ -20,7 +20,7 @@ function ContactUs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const contact = await fetch("http://localhost:3535/contact-form", {
+      const contact = await fetch("https://hospital-management-full-stack-project.onrender.com/contact-form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
