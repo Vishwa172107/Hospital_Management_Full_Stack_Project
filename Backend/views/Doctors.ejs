@@ -45,9 +45,9 @@
                 <% for (doctor of doctors) { %>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                         <div class="card h-100">
-                            <img src="<%= doctor.src %>" alt="Doctor Image" class="card-img-top">
+                            <img src="<%= doctor.photo %>" alt="Doctor Image" class="card-img-top">
                             <div class="card-body">
-                                <h4 class="card-title">Dr. <%= doctor.name %></h4>
+                                <h4 class="card-title"><%= doctor.name %></h4>
                                 <p class="card-text">Speciality: <%= doctor.speciality %></p>
                                 <p class="card-text">Rating: <%= doctor.stars %> / 5</p>
                                 <!-- Update the button to redirect to /appointment with doctor ID -->
