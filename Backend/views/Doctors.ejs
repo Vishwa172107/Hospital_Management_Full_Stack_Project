@@ -49,7 +49,7 @@
                             <div class="card-body">
                                 <h4 class="card-title"><%= doctor.name %></h4>
                                 <p class="card-text">Speciality: <%= doctor.speciality %></p>
-                                <p class="card-text">Rating: <%= doctor.stars %> / 5</p>
+                                <p class="card-text">Rating: ⭐<%= doctor.rating %> / 5</p>
                                 <!-- Update the button to redirect to /appointment with doctor ID -->
                                 <a href="/appointment/<%= doctor._id %>" class="btn btn-primary">Book an Appointment</a>
                             </div>
