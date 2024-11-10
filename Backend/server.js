@@ -7,7 +7,7 @@ let server = e()
 const port = process.env.PORT || 3535
 server.use(e.static(path.join(__dirname, 'public')));
 server.use(e.urlencoded({ extended: true }));
-server.use(cors(origin="https://localhost:5173"))
+server.use(cors(origin="https://hospital-management-full-stack-project-r18k.onrender.com"))
 server.use(e.json())
 server.listen(port, ()=>{
     console.log("Server listening at 3535");
